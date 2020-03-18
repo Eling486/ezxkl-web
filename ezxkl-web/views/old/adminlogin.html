@@ -1,0 +1,82 @@
+<html>
+ <head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="templates/head.js" charset="utf-8"></script>
+	<title><%=title%></title>
+ </head>
+ <body>
+	<div class="container">
+		<header id="header" class="header">
+		<script type="text/javascript" src="templates/header.js"></script>
+		</header>
+		<main di="main" class="main">
+			<div class="main-inner">
+				<div class="content-wrap">
+					<div id="concent" class="content">
+						<div class="message-wrap"><%- message %></div>
+						<div class="input-wrap" id="input-wraper-login">
+							<h2>Login-Admin</h2>
+							<div class="error-wrap" id="error-wrap"></div>
+							<form onkeypress="return event.keyCode != 13;">
+								<p><input type='text' placeholder='用户名' id='username'/></p>
+								<p><input type='password' placeholder='密码' id='psw1' name='psw1'/></p>
+								<p><button type='button' class="btn-submit" id='login'>登录</button></p>
+								<p><a href="/login" title="点击跳转至普通用户登录">非管理员无法登录呦~</a></p>
+							</form>
+						</div>
+					</div>
+				</div>
+				<aside id="sidebar" class="sidebar">
+					<div class="sidebar-inner">
+
+					</div>
+				</aside>
+			</div>
+		</main>
+		<footer id="footer" class="footer">
+		<script type="text/javascript" src="templates/footer.js"></script>
+		</footer>
+	</div>
+	<script type="text/javascript" >
+		$(function(){
+
+			$('#login').click(function(){AdminLogin()});
+
+			$(document).keydown(function(event){
+				if(event.keyCode==13){
+					$("#login").click(AdminLogin());
+				}
+			});
+		});
+		
+		function AdminLogin(){
+				var username= $('#username').val();
+				var psw1= $('#psw1').val();
+				var data={'name':username,'psw':md5(psw1)};
+				if(!username){
+					$('#error-wrap').html('<div style="color:red;">请输入用户名</div>');
+				}
+				else if(!psw1){
+					$('#error-wrap').html('<div style="color:red;">请输入密码</div>');
+				}
+				else {
+					$.ajax({
+						url:'/adminlogin',
+						type:'post',
+						data:data,
+						success:function(data,status){
+							if(status=='success'){
+								location.href='administration';
+							}
+						},
+						error:function(data,err){
+							console.log('ajax fail');
+							location.href='adminlogin';
+						}
+					})
+				}
+			};
+
+	</script>
+ </body>
+</html>

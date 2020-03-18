@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="templates/head.js" charset="utf-8"></script>
+	<script src="https://cdn.bootcss.com/marked/0.8.0/marked.min.js"></script>
+	<title>北京二中下课铃投稿</title>
+</head>
+
+<body>
+	<div class="container">
+		<header id="header" class="header">
+			<script type="text/javascript" src="templates/header.js"></script>
+		</header>
+		<main di="main" class="main">
+			<div class="main-inner">
+				<div class="content-wrap">
+					<div id="concent" class="content">
+						<div class="input-wrap" id="input-wraper-contribution">
+							<h2>发布公告</h2>
+							<div class="error-wrap" id="error-wrap"></div>
+							<form onkeypress="return event.keyCode != 13;">
+								<p><label class="edit-label">发布时间：</label><input type='text' placeholder='发布时间' id='time' autocomplete="off" /><button type='button' class="btn-common" id='get-nowtime'>填入当前时间</button></p>
+								<p><label class="edit-label">标题：</label><input type='text' placeholder='标题' id='title' autocomplete="off" /></p>
+								<p><label class="edit-label">发布人：</label><input type='text' placeholder='发布人' id='user' autocomplete="off" /></p>
+								<p><label class="edit-label">公告内容：</label><textarea class="textarea" name="text-md" id="text-md"
+										placeholder='请输入公告内容（markdown语法格式）' rows="20" cols="100"></textarea></p>
+								<p><input type='button' value='预览' id='preview' /></p>
+							</form>
+						</div>
+						<div class="notice-preview-wrap" id="notice-preview-wrap" style="display: none;">
+							<div class="notice-preview" id="notice-preview" >
+
+							</div>
+							<p><button type='button' class="btn-submit" id='publish-notice'>上传</button></p>
+						</div>
+						<aside id="sidebar" class="sidebar">
+							<div class="sidebar-inner">
+
+							</div>
+						</aside>
+					</div>
+		</main>
+		<footer id="footer" class="footer">
+			<script type="text/javascript" src="templates/footer.js"></script>
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/publish.js"></script>
+</body>
+
+</html>

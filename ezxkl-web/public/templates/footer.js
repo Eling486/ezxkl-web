@@ -1,0 +1,11 @@
+document.writeln("          <div class=\'footer-inner\' style=\'height:auto;\'>");
+document.writeln("				<p>北京二中下课铃查询及投稿网站</p>");
+document.writeln("				<p>Verison：<a title=\'（大概是用头发换的）\'>1.3.1</a>&nbsp&nbsp|&nbsp&nbspPowered by Node.js & Express.</p>");
+document.writeln("				<p>托管于<a href=\'https://cloud.tencent.com/\' target=\'_blank\' class=\'external\' rel=\'nofollow\'");
+document.writeln("						title=\'点击跳转至腾讯云\'>腾讯云</a>（然而并不免费←_←）.");
+document.writeln("					<a href=\'https://www.bootcdn.cn/\' target=\'_blank\' class=\'external\' rel=\'nofollow\'");
+document.writeln("						title=\'（开源项目的加速）\'>BootCDN</a> 提供CDN服务.");
+document.writeln("				</p>");
+document.writeln("				<p>© 2019-2020 [这里本应该有个备案号 可惜还没有备案.(逃]</p>");
+document.writeln("				<p>Made by <a title=\'可以叫我翼凌(qaq)\'>Eling</a>.&nbsp&nbsp|&nbsp&nbspThank alawang.</p>");
+document.writeln("			</div>");

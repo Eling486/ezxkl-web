@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="templates/head.js" charset="utf-8"></script>
+	<script src="https://cdn.bootcss.com/marked/0.8.0/marked.min.js"></script>
+	<title>北京二中下课铃投稿</title>
+</head>
+
+<body onload="GetNotices()">
+	<div class="container index">
+
+		<header id="header" class="header">
+			<div class='header-inner'>
+				<div class="div-menu-button" id="div-menu-button"><i class='menu-icon fa fa-fw fa-bars fa-lg'></i></div>
+				<div class="header-wrap">
+					<nav class='header-nav'>
+						<ul class='menu'>
+							<li class='menu-item menu-item-index'><a href='/' class='menu-link'><i
+										class='menu-icon fa fa-home'><span>首页</span></i></a></li>
+							<li class='menu-item menu-item-plan'><a href='/plan' class='menu-link'><i
+										class='menu-icon fa fa-calendar-check-o'><span>安排</span></i></a></li>
+							<li class='menu-item menu-item--history'><a href='/history' class='menu-link'><i
+										class='menu-icon fa fa-history'><span>查询</span></i></a></li>
+							<li class='menu-item menu-item-contribution'><a href='/contribution' class='menu-link'><i
+										class='menu-icon fa fa-upload'><span>投稿</span></i></a></li>
+							<li class='menu-item menu-item-administration'><a href='/administration'
+									class='menu-link'><i class='menu-icon fa fa-edit'><span>管理</span></i></a></li>
+							<li class='menu-item menu-item-about'><a href='/about' class='menu-link'><i
+										class='menu-icon fa fa-info'><span>关于</span></i></a></li>
+							<li class='menu-item menu-item-report'><a href='/report' class='menu-link'><i
+										class='menu-icon fa fa-comment'><span>反馈</span></i></a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main di="main" class="main">
+			<div class="main-inner">
+				<div class="content-wrap index">
+					<div id="concent" class="content">
+						<div class="headimg-wrap"><img src="img/headimg.jpg" alt="Hello"></div>
+						<div class="index-text-wrap">
+							<h2>欢迎使用北京二中下课铃投稿平台！</h2>
+							<p>由于饱受网易云平台私信之苦，下课铃收集簿决定成为（bu shi）。你可以自由使用这个平台，我们的公告也会发到这里，期待各位的投稿吖！！谢谢大家一直以来的支持！</p>
+						</div>
+						<div class="notices-wrap" id="notices-wrap">
+
+						</div>
+						<div class="backgroundimg-wrap"><img src="img/backgroundimg.png" alt=""></div>
+					</div>
+				</div>
+
+				<aside id="sidebar" class="sidebar">
+					<div class="sidebar-inner">
+
+					</div>
+				</aside>
+			</div>
+		</main>
+		<footer id="footer" class="footer">
+			<script type="text/javascript" src="templates/footer.js" charset="utf-8"></script>
+		</footer>
+	</div>
+	<script>
+		$(function () {
+			$(".header-wrap").width("180px");
+			$(".header-wrap li:not(.menu-item-index)").fadeOut(0);
+			$(".div-menu-button").addClass("menu-closed");
+		});
+		$(".div-menu-button").click(function () {
+			$(".div-menu-button").addClass("loaded");
+			if ($('.div-menu-button').hasClass('menu-closed')) {
+				$(".div-menu-button, .menu-closed").removeClass("menu-closed");
+				$(".header-wrap").animate({ "width": "+=100%" }, "fast");
+				//$(".header-wrap li").css('display','inline-block');
+				$(".header-wrap li").fadeIn("normal");
+				$(".div-menu-button").addClass("menu-opened");
+			} else if ($('.div-menu-button').hasClass('menu-opened')) {
+				$(".div-menu-button,.menu-opened").removeClass("menu-opened");
+				$(".header-wrap li:not(.menu-item-index)").fadeOut("fast");
+				//$(".header-wrap li:not(.menu-item-index)").css('display','none');
+				$(".header-wrap").animate({ "width": "-=100%" }, "fast");
+				$(".div-menu-button").addClass("menu-closed");
+			}
+		});
+	</script>
+	<script type="text/javascript" src="js/get_notices.js" charset="utf-8"></script>
+</body>
+
+</html>

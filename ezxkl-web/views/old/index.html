@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="templates/head.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="/css/banner.css">
+	<script type="text/javascript" src="js/banner.js"></script>
+	<script src="https://cdn.bootcss.com/marked/0.8.0/marked.min.js"></script>
+	<title>北京二中下课铃投稿</title>
+</head>
+
+<body onload="GetNotices()">
+	<div class="container index">
+		<header id="header" class="header">
+			<script type="text/javascript" src="templates/header.js" charset="utf-8"></script>
+		</header>
+		<main di="main" class="main">
+			<div class="main-inner">
+				<div class="banner-wrap">
+					<!--头图虚化背景（填留白）-->
+					<div class="banner_background">
+						<div class="banner_wraps">
+							<div class="banner_wrap_img">
+								<!--在此添加wrap_img（最好与img一致）-->
+								<img class="banner_wrap_img" id="banner_wrap_img1" src="img/banner/1.jpg" onclick="">
+								<img class="banner_wrap_img" id="banner_wrap_img2" src="img/banner/2.jpg" onclick="">
+								<img class="banner_wrap_img" id="banner_wrap_img3" src="img/banner/3.jpg" onclick="">
+								<img class="banner_wrap_img" id="banner_wrap_img4" src="img/banner/4.jpg" onclick="">
+								<img class="banner_wrap_img" id="banner_wrap_img5" src="img/banner/5.jpg" onclick="">
+								<!--------------->
+							</div>
+						</div>
+					</div>
+
+					<!--头图主图-->
+					<div class="banner">
+						<div class="banners">
+							<div class="click_left"><img class="get_height" onclick="banner_left_right('left')"
+									src="img/banner_left.png"></div>
+							<div class="click_right"><img onclick="banner_left_right('right')"
+									src="img/banner_right.png"></div>
+							<div class="number">
+								<div class="numbers"></div>
+								<div style="clear: both;"></div>
+							</div>
+							<!--onlick事件调用函数 link([url],[跳转方式]),跳转方式：true:新窗口打开,false:当前窗口打开-->
+							<div class="banner_img">
+								<!--在此添加img-->
+								<img class="banner_img1" src="img/banner/1.jpg" onclick="">
+								<img class="banner_img2" src="img/banner/2.jpg" onclick="">
+								<img class="banner_img3" src="img/banner/3.jpg" onclick="">
+								<img class="banner_img4" src="img/banner/4.jpg" onclick="">
+								<img class="banner_img5" src="img/banner/5.jpg" onclick="">
+								<!--------------->
+							</div>
+							<script type="text/javascript">
+								loads();
+							</script>
+						</div>
+					</div>
+				</div>
+
+				<div class="content-wrap index">
+					<div id="concent" class="content">
+						<div class="notices-wrap" id="notices-wrap">
+
+						</div>
+					</div>
+				</div>
+
+				<aside id="sidebar" class="sidebar">
+					<div class="sidebar-inner">
+
+					</div>
+				</aside>
+			</div>
+		</main>
+		<footer id="footer" class="footer">
+			<script type="text/javascript" src="templates/footer.js" charset="utf-8"></script>
+		</footer>
+	</div>
+	<script type="text/javascript" src="js/get_notices.js" charset="utf-8"></script>
+</body>
+
+</html>

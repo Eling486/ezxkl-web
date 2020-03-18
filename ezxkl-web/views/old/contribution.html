@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"  class="no-js">
+ <head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="templates/head.js" charset="utf-8"></script>
+  <title><%= title %></title>
+ </head>
+  <body>
+    <div class="container">
+      <header id="header" class="header">
+      <script type="text/javascript" src="templates/header.js"></script>
+      </header>
+      <main di="main" class="main">
+        <div class="main-inner">
+          <div class="content-wrap">
+            <div id="concent" class="content">
+              <div class="user-wrap">
+                <h1>你好，<%= user.name %></h1>
+                <p>欢迎使用下课铃投稿功能</p>
+                <p><a href="/logout">点击退出 </a></p>
+              </div>
+              <div class="message-wrap"></div>
+              <div class="input-wrap" id="input-wraper-contribution">
+                <h2>投稿</h2>
+                <div class="error-wrap" id="error-wrap"></div>
+                <form onkeypress="return event.keyCode != 13;">
+                  <p><input type='text' placeholder='请在此粘贴网易云链接' id='ncmid' autocomplete="off"/></p>
+                  <p><button type='button' class="btn-submit" id='ncmid_submit'>确定</button></p>
+                </form>
+                <div class="get-musicinfo-wrap" id="get-musicinfo-wrap" style="display: none;">
+                  <p>投稿人：<span class="contribution-span" id="contribute-user"><%= user.name %></span></p>
+                  <div class="musicinfo-wrap">
+
+                  </div>
+                  <div class="aplayer-warp" id="aplayer-contribution">
+                    <span class="contribution-span">是这首吗？↓</span>
+                    <div class='aplayer' id='aplayer'></div>
+                    <script>
+                      const ap = new APlayer({
+                        container: document.getElementById('aplayer'),
+                        loop:'one',
+                        theme: '#e9e9e9',
+                      });
+                    </script>
+                  </div>
+                  <input type='text' class="notes" id='notes' placeholder='可以在这里输入备注哦（限20字以内）' maxlength="20" autocomplete="off" />
+                    <p><button type='button' class="btn-submit" id='contribution_submit'>提交投稿</button></p>
+                </div>
+                
+              </div>  
+            </div>
+          </div>
+  
+          <aside id="sidebar" class="sidebar">
+            <div class="sidebar-inner">
+  
+            </div>
+          </aside>
+        </div>
+      </main>
+      <footer id="footer" class="footer">
+      <script type="text/javascript" src="templates/footer.js"></script>
+      </footer>
+    </div>
+    <script type="text/javascript" src="js/contribute.js"></script>
+  </body>
+</html>

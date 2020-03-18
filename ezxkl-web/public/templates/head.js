@@ -1,0 +1,13 @@
+document.writeln("	<meta http-equiv=\'X-UA-Compatible\' content=\'IE=edge\'>");
+document.writeln("	<meta name=\'viewport\' content=\'width=device-width, initial-scale=1\'>");
+document.writeln("	<link rel=\'stylesheet\' href=\'https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css\'>");
+document.writeln("	<link rel=\'stylesheet\' href=\'font-awesome/css/font-awesome.min.css\'>");
+document.writeln("	<link rel=\'stylesheet\' type=\'text/css\' href=\'css/style.css\'>");
+document.writeln("	<script src=\'https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js\'></script>");
+document.writeln("	<script src=\'https://cdn.jsdelivr.net/npm/color-thief-don@2.0.2/src/color-thief.js\'></script>");
+document.writeln("	<script src=\'https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js\'></script>");
+document.writeln("	<script src=\'https://cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js\'></script>");
+document.writeln("	<!--[if IE]>");
+document.writeln("  	<script src=\'http://html5shiv.googlecode.com/svn/trunk/html5.js\'></script>");
+document.writeln("	<![endif]-->");
+document.writeln("	<meta name=\'viewport\' content=\'width=device-width,initial-scale=1.0,minimun-scale=1.0,maximum-scale=1.0,user-scalable=no\'>");

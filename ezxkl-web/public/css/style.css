@@ -1,0 +1,342 @@
+/*--通用样式--*/
+*{
+	margin:0;
+}
+html{
+	font-size: 20px;
+	height: 100%;
+}
+body{
+	height: 100%;
+}
+.container{
+	min-height: 100%;
+	position: relative;
+	display: flex;
+}
+/*菜单栏*/
+.header{
+	position: fixed;
+	width: 100%;
+	height: 38px;
+	text-align: center;
+	z-index: 3;
+}
+.header-inner{
+	
+	text-align: left;
+}
+.header-inner, .header-nav, .header-nav ul{
+	height: 100%;
+}
+/*.div-menu-button.menu-closed, .div-menu-button.menu-opened{
+	position: absolute;
+	left: 20px;
+	display: inline-block;
+	line-height: 50px;
+	color: #1565C0;
+	padding: 0 5px;
+	
+}
+.div-menu-button.menu-closed:hover{
+	cursor: pointer;
+	color: #fff;
+	animation:menu-button 0.2s forwards;
+	-moz-animation:menu-button 0.2s forwards; 
+	-webkit-animation:menu-button 0.2s forwards; 
+	-o-animation:menu-button 0.2s forwards;
+	transform-origin: 50% 50%;
+}
+@keyframes menu-button{
+	from {background: none;color: #1565C0;}
+	to {background:#1565C0;color: #fff;}
+}
+@-moz-keyframes menu-button{
+	from {background: none;color: #1565C0;}
+	to {background:#1565C0;color: #fff;}
+}
+@-webkit-keyframes menu-button{
+	from {background: none;color: #1565C0;}
+	to {background:#1565C0;color: #fff;}
+}
+@-o-keyframes menu-button{
+	from {background: none;color: #1565C0;}
+	to {background:#1565C0;color: #fff;}
+}
+
+.div-menu-button.menu-opened{
+	background-color:#1565C0;
+	cursor: pointer;
+	color: #fff;
+}*/
+.div-menu-button{
+	position: absolute;
+	left: 20px;
+	display: inline-block;
+	line-height: 50px;
+	color: #fff;
+	padding: 0 10px;
+}
+.div-menu-button:hover{
+	background-color:rgb(15, 80, 155);
+	cursor: pointer;
+}
+.div-menu-button.menu-opened.loaded i{
+	animation: menu-button-rotate 0.3s forwards;
+	-moz-animation:menu-button-rotate 0.4s forwards;
+	-webkit-animation: menu-button-rotate 0.3s forwards;
+	-o-animation:menu-button-rotate 0.3s forwards;
+}
+.div-menu-button.menu-closed.loaded i{
+	animation: menu-button-rotate 0.3s forwards reverse;
+	-moz-animation:menu-button-rotate 0.4s forwards reverse;
+	-webkit-animation: menu-button-rotate 0.3s forwards reverse;
+	-o-animation:menu-button-rotate 0.3s forwards reverse;
+}
+@keyframes menu-button-rotate{
+	from {transform: rotate(0deg); }
+	to {transform: rotate(90deg); }
+}
+@-moz-keyframes menu-button-rotate{
+	from {transform: rotate(0deg); }
+	to {transform: rotate(90deg); }
+}
+@-webkit-keyframes menu-button-rotate{
+	from {transform: rotate(0deg); }
+	to {transform: rotate(90deg); }
+}
+@-o-keyframes menu-button-rotate{
+	from {transform: rotate(0deg); }
+	to {transform: rotate(90deg); }
+}
+.header-wrap{
+	background-color: #1565C0;
+	height: 50px;
+}
+.header-nav{
+	display: inline-block;
+	width: 1000px;
+	margin-left: 40px;
+}
+.menu .menu-item {
+	display:inline-block;
+	line-height:50px;
+	color:#fff;
+	margin: 0 5px;
+}
+.menu .menu-item a {
+	display:block;
+	padding:0 14px;
+	color:#fff;
+	font-size:0.9em;
+	font-weight:bold;
+}
+.menu .menu-item a span{
+	margin: 0 0 0 6px;
+}
+.menu .menu-item a:hover {
+	background-color:rgb(15, 80, 155);
+}
+
+/*内容*/
+main{
+	width:100%;
+}
+
+.banner-wrap{
+	width:100%;
+	height:auto;
+}
+.banner_background{
+	position:absolute;
+	z-index:-1;
+	left:50%;
+	transform: translate(-50%);
+	width:100%;
+	height:575px;
+}
+.banner_wrap_img {
+	filter: blur(10px);	 /*blur的值越大越模糊*/
+	-webkit-filter: blur(10px);	
+	-ms-filter: blur(10px);	
+	-moz-filter: blur(10px);
+}
+.banner{
+	position:absolute;
+	z-index:2;
+	left:50%;
+	transform: translate(-50%);
+	width:1350px;
+	height:575px;
+}
+.content-wrap{
+	display: block;
+	margin: 0 auto;
+	padding: 80px 0 200px 0;
+	width: 1000px;
+	height: auto;
+	text-align: center;
+}
+.content-wrap.index{
+	padding: 100px 0 200px 0;
+}
+.content{
+	position: relative;
+}
+.headimg-wrap{
+	height: 120px;
+	width: 120px;
+	margin: 0 auto;
+	
+}
+.headimg-wrap img{
+	display:block;
+	width:100%;
+	border-radius:50%;
+	border: 1.5px dashed #ccc; 
+}
+.index-text-wrap h2{
+	margin: 20px 0;
+}
+.index-text-wrap p{
+	display: inline-block;
+	margin: 10px 0;
+	line-height: 40px;
+}
+.notices-wrap{
+	position: relative;
+	content: "";
+    display: table;
+	width: 100%;
+	height: 100%;
+	
+}
+.backgroundimg-wrap{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	height: 700px;
+	width: auto;
+	margin: 0 auto;
+	z-index: -5;
+}
+.backgroundimg-wrap img{
+	display:block;
+	height:100%;
+	opacity:0.6;
+}
+.notice-wrap{
+	position: relative;
+	width: 700px;
+	min-height: 50px;
+	margin: 50px auto;
+	padding: 15px;
+	background-color: rgba(242,242,242,.6);
+	border-radius:3px;
+	box-shadow:0 2px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
+}
+.notice-datetag {
+	display:inline-block;
+	position:absolute;
+	width:90px;
+	height:30px;
+	line-height:30px;
+	padding-left:10px;
+	background:rgba(255,64,4,.5);
+	left:-8px;
+	top:20px;
+	font-size: 0.8em;
+	color: #fff;
+}
+
+.notice-datetag:before {
+	content:"";
+	position:absolute;
+	/*height:0;
+	width:0;*/
+	border-bottom:8px solid rgba(255,64,4,.7);
+	border-left:8px solid transparent;
+	top:-8px;
+	left:0;
+}
+.notice-datetag:after {
+	content:"";
+	position:absolute;
+	/*height:0;
+	width:0;*/
+	border-top:15px solid transparent;
+	border-bottom:15px solid transparent;
+	border-left:10px solid rgba(255,64,4,.5);
+	right:-10px;
+}
+
+.notice-contnent{
+	text-align: left;
+	margin: 5px 0 10px 5px;
+}
+.notice-user, .notice-time{
+	font-size: 0.8em;
+	color: #888;
+	margin: 10px 15px 5px 0;
+}
+
+.plan-wrap{
+	width: 800px;
+	margin: 20px auto;
+}
+.plan{
+	display: inline-block;
+	vertical-align:top;
+	text-align: left;
+	width: 215px;
+	margin: 15px 10px;
+	padding-bottom: 10px;
+	background-color: rgba(242,242,242,.5);
+	border-radius:3px;
+	box-shadow:0 2px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
+}
+.plan-date-wrap{
+	text-align: center;
+	margin-bottom:10px;
+	border-radius:3px 3px 0 0;
+	box-shadow:0 2px 2px 0 rgba(0,0,0,.07), 0 1px 5px 0 rgba(0,0,0,.1);
+	color: #fff;
+	background-color: #384C70;
+	font-size: 0.95em;;
+	padding: 2px 0;
+}
+.plan p{
+	margin: 0 5px;
+}
+
+/*底部*/
+footer{
+	position:absolute;
+	bottom:0;
+	height:115px;
+	width:100%;
+	text-align:center;
+	padding:0.5em 0;
+	background-color:#333;
+	font-size:0.6em;
+	z-index: 3;
+}
+.footer-inner p{
+	color:#888;
+	margin:0.5em 0;
+}
+.footer-inner a{
+	text-decoration: none;
+	color:#cc0000;
+}
+.footer-inner a:hover{
+	color:#ff0000;
+}
+
+/*--移动设备适配-开始--*/
+@media (max-width:768px) {
+body{
+	font-size:12px;
+}
+/*--移动设备适配-结束--*/
+}
