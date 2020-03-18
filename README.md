@@ -1,13 +1,13 @@
-#ezxkl-web
-##——一个较为完善的下课铃投稿系统
+# ezxkl-web
+## ——一个较为完善的下课铃投稿系统
 </br>
-##必要的前置安装
+## 必要的前置安装
 * `Node.js`
 * `npm`
 	* 因为网络原因，国内推荐使用淘宝镜像：`cnpm`
 * `mongoDB`
 
-##安装方式
+## 安装方式
 在根目录下执行：
 ```
 npm install
@@ -17,7 +17,7 @@ npm install
 cnpm install
 ```
 
-##感谢
+## 感谢
 * 感谢这些朋友为项目的实现提供了帮助（排序不分先后）
 	* alawang
 </br></br>
@@ -27,5 +27,5 @@ cnpm install
 	* [npm](https://www.npmjs.com/)
 	* [cnpm](https://developer.aliyun.com/mirror/NPM?from=tnpm)
 
-##关于作者
+## 关于作者
 [Eling(Evan Chen)](https://github.com/Eling486)
